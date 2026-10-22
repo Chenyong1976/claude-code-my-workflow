@@ -8,7 +8,7 @@ allowed-tools: ["Read", "Grep", "Glob", "Write", "Agent", "Task"]
 
 # /grant-proposal — Research Grant Proposal Scaffolder
 
-Compose a funder-shaped grant proposal draft from primitives you already have: an `/interview-me` research spec supplies the science, `/data-management-plan` supplies the DMP, `/capture-environment` supplies the facilities/computational statement, and `/lit-review` supplies the prior-work framing. This skill structures and stitches — it does **not** submit anywhere, and it does not invent identification strategy where a spec is absent.
+Compose a funder-shaped grant proposal draft from primitives you already have: an `/interview-me` research spec supplies the science, `/data-management-plan` supplies the DMP, `/capture-environment` supplies the facilities/computational statement, and `/lit-review-sa` supplies the prior-work framing. This skill structures and stitches — it does **not** submit anywhere, and it does not invent identification strategy where a spec is absent.
 
 **Core principle:** A proposal is a *coherence* artifact. Aims, methods, budget, timeline, and broader impacts must agree with each other and with the underlying research spec. The skill's main value-add over a blank template is the Phase 3 coherence pass (aims ↔ methods ↔ budget ↔ timeline).
 
@@ -46,14 +46,14 @@ Economics framing is the primary lens (DiD/event-study, IV, RCT, panel; AEA Data
 2. Locate the research spec: `--input <path>`, else the most recent `quality_reports/specs/research_spec_*.md` from `/interview-me`. If none exists, **stop and recommend `/interview-me`** — do not invent the science.
 3. From the spec, extract: research question, hypotheses (directional), identification strategy (DiD / IV / RDD / RCT / structural), data sources, sample, expected results, contribution. Record the spec's `**Paper type:**` value if present (the header line `/interview-me` writes; accept a `paper_type:` field in a hand-written spec too).
 4. **The program's call.** Ask once for the actual solicitation, NOFO, RFP or work-programme text (`--call <file>`, PDF or text — Read handles both). When given, take from it the required sections and documents, the page or word limits, and the review criteria, quoting its wording with a page reference; never paraphrase a limit. When none is given, continue with the generic profile and say so in the output header.
-5. Scan `quality_reports/` for adjacent artifacts to reuse: a `/lit-review` synthesis (prior work), a `/preregister` PAP (analysis plan), a `passport.yaml` or `/data-analysis` outputs (preliminary results).
+5. Scan `quality_reports/` for adjacent artifacts to reuse: a `/lit-review-sa` synthesis (prior work), a `/preregister` PAP (analysis plan), a `passport.yaml` or `/data-analysis` outputs (preliminary results).
 
 ### Phase 1 — Scaffold sections from templates + the spec
 
 Generate the funder's section set. Map spec content into slots:
 
 - **Specific Aims / Project Summary** — RQ + 2–3 numbered, directional aims drawn from the spec's hypotheses.
-- **Background & Significance** — motivation + prior work; pull citations from the `/lit-review` synthesis if present (do not re-search unless asked).
+- **Background & Significance** — motivation + prior work; pull citations from the `/lit-review-sa` synthesis if present (do not re-search unless asked).
 - **Research Design & Methods** — lift the identification strategy verbatim from the spec (estimand, treatment/control, identifying assumption, robustness and placebo strategy, clustering). Name the estimator concretely (e.g. `fixest::feols`, `AER::ivreg`, Stata `reghdfe`).
 - **Preliminary Results** — summarize any existing `/data-analysis` / passport outputs; otherwise mark `[PRELIMINARY RESULTS: none yet — describe planned pilot]`.
 - **Timeline & Milestones** — quarter/year table aligned to the aims (every aim gets a milestone).
@@ -133,7 +133,7 @@ Claims extracted: N · Verified: N · Outcome: PASS / PARTIAL / FAIL
 - [`.claude/skills/interview-me/SKILL.md`](../interview-me/SKILL.md) — produces the research spec this skill consumes; run it first if none exists.
 - [`.claude/skills/data-management-plan/SKILL.md`](../data-management-plan/SKILL.md) — Phase 2 delegate for the DMP/DMSP section.
 - [`.claude/skills/capture-environment/SKILL.md`](../capture-environment/SKILL.md) — Phase 2 delegate for the facilities/computational statement.
-- [`.claude/skills/lit-review/SKILL.md`](../lit-review/SKILL.md) — supplies Background & Significance prior-work framing.
+- [`.claude/skills/lit-review-sa/SKILL.md`](../lit-review-sa/SKILL.md) — supplies Background & Significance prior-work framing.
 - [`.claude/skills/preregister/SKILL.md`](../preregister/SKILL.md) — a PAP can seed the analysis plan; preregistration is the forward commitment a funded project then executes.
 - [`.claude/rules/confidential-data.md`](../../rules/confidential-data.md) — governs how sensitive data sources appear in the DMP and budget.
 - [`.claude/rules/post-flight-verification.md`](../../rules/post-flight-verification.md) — Phase 4 citation fact-check.

@@ -18,7 +18,7 @@ Fact-check a draft using the **Post-Flight Verification protocol** ([`.claude/ru
 ## When to pick this skill
 
 - **`/verify-claims`** (this skill) — ad-hoc fact-checking on any draft or text block the user hands you. One-shot, user-invoked.
-- **Other skills that auto-run Post-Flight internally** (`/lit-review`, `/research-ideation`, `/respond-to-referees`, `/review-paper --peer`) — no need to call this separately; they already run it.
+- **Other skills that auto-run Post-Flight internally** (`/lit-review-sa`, `/research-ideation`, `/respond-to-referees`, `/review-paper --peer`) — no need to call this separately; they already run it.
 - **`/proofread`** — grammar, typos, overflow. Different lens.
 - **`/review-paper`** (default mode) — full manuscript review, not just claim verification.
 - **`/validate-bib`** — checks citations *exist* and are well-formed (structural + DOI). This skill checks they *hold* (the cited paper supports the attributed claim). Complementary — run both before submission.

@@ -11,6 +11,17 @@
 
 ---
 
+## Research Environment (Python-first)
+
+Your global `~/.claude/CLAUDE.md` also loads in every session and holds the standing research rules: estimator defaults, data-source quirks, writing style, uncertainty protocol. Do not restate them here. Where it conflicts with this file, the global rules on language, tooling and prose style win; the workflow rules (plan-first, gates, logging) govern process.
+
+- **Language:** Python via Conda env `research` (`C:/ProgramData/anaconda3/envs/research/python.exe` if `python` is not on PATH). R only where the global file says so (`did`, `fixest`).
+- **Analysis code:** `scripts/python/` as numbered stages plus one master script; outputs to `output/`; raw data in `data/raw/` and never committed if restricted ([`confidential-data.md`](.claude/rules/confidential-data.md)).
+- **Hooks and gates** call `python3`; on Windows this needs a `python3` on PATH that resolves to a real interpreter (the Microsoft Store stub does not count).
+- `/review-paper`, `/data-analysis`, `/verify-claims` and the referee agents are language-agnostic; `/review-r` and `/r-package-check` apply only to R code.
+
+---
+
 ## Scope Discipline
 
 **Do exactly what was asked — nothing adjacent.** Do not add README files, build scripts,
@@ -128,7 +139,7 @@ The full table of all skills lives in [README.md](README.md#skills-claudeskills)
 - **Slides / teaching:** `/create-lecture` `/compile-latex` `/deploy` `/qa-quarto` `/slide-excellence` `/syllabus` `/teach-from-paper` `/scaffold-exercises`
 - **Papers / review:** `/review-paper` (`--peer`) `/seven-pass-review` `/respond-to-referees` `/verify-claims` `/proofread` `/humanize` `/submission-disclosures`
 - **Data / reproducibility:** `/data-analysis` `/simulation-study` `/audit-reproducibility` `/diagnose` `/replication-package` `/capture-environment` `/power-analysis` `/disclosure-check`
-- **Research / writing:** `/interview-me` `/lit-review` `/research-ideation` `/preregister` `/grant-proposal` `/data-management-plan`
+- **Research / writing:** `/interview-me` `/lit-review-sa` `/research-ideation` `/preregister` `/grant-proposal` `/data-management-plan`
 - **Verification / rigor:** `/vaccinate` `/challenge` `/oracle-review` `/adjudicate-review` `/differential-audit` `/blast-radius` `/verify-artifact` `/credible-claims` `/deep-audit`
 - **Meta / workflow:** `/commit` `/learn` `/new-skill` `/checkpoint` `/context-status` `/deep-audit` `/coauthor-brief` `/triage-inbox` `/issues`
 

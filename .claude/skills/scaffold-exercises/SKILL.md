@@ -125,7 +125,7 @@ Solution key mirrors the numbering, adding `### Solution` and `> Why this matter
 - [`.claude/skills/create-lecture/SKILL.md`](../create-lecture/SKILL.md) — build the lecture these exercises practice; shares notation-reuse + motivation-first conventions.
 - [`.claude/skills/data-analysis/SKILL.md`](../data-analysis/SKILL.md) — for empirical problems whose reference solution needs a full R estimation pipeline.
 - [`.claude/skills/simulation-study/SKILL.md`](../simulation-study/SKILL.md) — when a problem demonstrates an estimator's finite-sample behavior; reuse its seeded-DGP discipline.
-- [`.claude/skills/lit-review/SKILL.md`](../lit-review/SKILL.md) — source advanced problems from current papers on the topic.
+- [`.claude/skills/lit-review-sa/SKILL.md`](../lit-review-sa/SKILL.md) — source advanced problems from current papers on the topic.
 - [`.claude/skills/interview-me/SKILL.md`](../interview-me/SKILL.md) — turn a fuzzy "I want a set on…" into concrete learning objectives first.
 - [`templates/skill-template.md`](../../../templates/skill-template.md) — house style for authoring/extending this skill.
 

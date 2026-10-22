@@ -2232,7 +2232,7 @@ Five skills support the research workflow beyond slide development:
 
 | Skill | What It Does | When to Use |
 |-------|-------------|-------------|
-| `/lit-review [topic]` | Search, synthesize, and identify gaps in the literature | Starting a new project or section |
+| `/lit-review-sa [topic]` | Search, synthesize, and identify gaps in the literature | Starting a new project or section |
 | `/research-ideation [topic]` | Generate research questions, hypotheses, and empirical strategies | Brainstorming phase |
 | `/interview-me [topic]` | Interactive interview to formalize a vague idea into a concrete specification | When you have an intuition but not a plan |
 | `/review-paper [file]` | Full manuscript review with referee objections | Before submission or after a draft |
@@ -2265,7 +2265,7 @@ A research project is not a waterfall --- it is a **dependency graph**. Some pha
 
 ```
 /research-ideation ─────┐
-                        ├──→ /lit-review ──→ /data-analysis ──→ /review-paper
+                        ├──→ /lit-review-sa ──→ /data-analysis ──→ /review-paper
 /interview-me ──────────┘         ↑               ↑
                                   │               │
                           (can run in parallel)   │
@@ -3219,7 +3219,7 @@ description: Interactive interview that formalizes a fuzzy research idea into
   a structured spec (RQ, hypotheses, identification, data needs, empirical
   strategy). Use when user says "interview me", "help me think through this
   idea", "I have a half-baked idea". Multi-turn Q&A; saves spec to disk.
-  NOT for lit review (/lit-review) or ideation from scratch (/research-ideation).
+  NOT for lit review (/lit-review-sa) or ideation from scratch (/research-ideation).
 ```
 
 The final sentence --- "NOT for X, use /Y instead" --- is the disambiguation clause. Two skills with overlapping descriptions will split Claude's routing probability; the explicit "not for" resolves the tie.
@@ -3384,7 +3384,7 @@ Claude Code supports **plugins** --- bundled collections of skills, agents, hook
 | `/devils-advocate` | `.claude/skills/devils-advocate/` | Design challenge questions |
 | `/create-lecture` | `.claude/skills/create-lecture/` | Full lecture creation |
 | `/commit` | `.claude/skills/commit/` | Run the gates and commit; `--pr` pushes and opens a pull request; never merges |
-| `/lit-review` | `.claude/skills/lit-review/` | Literature search and synthesis |
+| `/lit-review-sa` | `.claude/skills/lit-review-sa/` | Literature search and synthesis |
 | `/research-ideation` | `.claude/skills/research-ideation/` | Research questions and strategies |
 | `/interview-me` | `.claude/skills/interview-me/` | Interactive research interview |
 | `/review-paper` | `.claude/skills/review-paper/` | Manuscript review |
@@ -3464,7 +3464,7 @@ Claude Code supports **plugins** --- bundled collections of skills, agents, hook
 | Content Invariants | `content-invariants.md` | `.tex`, `.qmd`, `Preambles/`, `scripts/R/**` |
 | Cross-Artifact Review | `cross-artifact-review.md` | `master_supporting_docs/`, `.tex`, `.qmd` |
 | Summary–Body Parity | `summary-parity.md` | `CHANGELOG.md`, `README.md`, `.qmd`, skill/rule/agent `.md` |
-| Post-Flight Verification | `post-flight-verification.md` | skills that generate factual claims (`/lit-review`, `/research-ideation`, `/respond-to-referees`, `/review-paper`, `/interview-me`) |
+| Post-Flight Verification | `post-flight-verification.md` | skills that generate factual claims (`/lit-review-sa`, `/research-ideation`, `/respond-to-referees`, `/review-paper`, `/interview-me`) |
 | Model Routing | `model-routing.md` | `.claude/agents/**/*.md`, `.claude/skills/**/SKILL.md` — 70/20/10 architect/editor split, per-agent `model:` field guidance (v1.9.0) |
 | Review Fencing | `review-fencing.md` | `*.tex`, `*.qmd`, `master_supporting_docs/**`, `quality_reports/` audit dirs, `claim-verifier.md` — reviewer independence as a property of the *environment*: neutral copy outside the checkout, prior verdicts withheld, own reading before prior findings, positive controls fenced from committed answer keys (v2.5.1) |
 | Stata Code Conventions | `stata-code-conventions.md` | `**/*.do`, `scripts/stata/**` — header scaffold, numbered pipeline, esttab tables, clustering discipline, AEA compliance (v1.9.0) |

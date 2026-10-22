@@ -104,7 +104,7 @@ If the document cites prior literature in the rationale section (e.g., "Building
 Skip post-flight if:
 
 - No prior-literature citations in the document.
-- User passes `--no-verify` (flag inherited from `/lit-review` and `/research-ideation` post-flight).
+- User passes `--no-verify` (flag inherited from `/lit-review-sa` and `/research-ideation` post-flight).
 
 ### PHASE 6 — Output
 

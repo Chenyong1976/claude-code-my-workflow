@@ -1,6 +1,6 @@
 ---
 paths:
-  - ".claude/skills/lit-review/SKILL.md"
+  - ".claude/skills/lit-review-sa/SKILL.md"
   - ".claude/skills/research-ideation/SKILL.md"
   - ".claude/skills/respond-to-referees/SKILL.md"
   - ".claude/skills/review-paper/SKILL.md"
@@ -20,7 +20,7 @@ Any skill whose output contains **factual claims that can be independently verif
 
 | Skill | High-risk claim types |
 |-------|----------------------|
-| `/lit-review` | Citations (paper exists, authors, year, venue); paraphrased claims ("Smith 2019 finds X") |
+| `/lit-review-sa` | Citations (paper exists, authors, year, venue); paraphrased claims ("Smith 2019 finds X") |
 | `/research-ideation` | "Has anyone tested this?" negative-literature claims; dataset structure claims; estimator feasibility claims |
 | `/respond-to-referees` | "We added X on page Y" assertions about actual revisions |
 | `/review-paper` (`--peer` mode) | Novelty-probe claims from WebSearch ("this paper's contribution is novel" / "similar to Jones 2020") |
@@ -102,7 +102,7 @@ Every skill that applies this rule must include a structured Post-Flight block i
 
 ## Opt-out
 
-`--no-verify` flag skips Post-Flight in `/lit-review`, `/research-ideation`, `/respond-to-referees` and `/interview-me`. Useful for speed-critical iterations or when the user is actively reading the source material themselves. Document the opt-out in each skill's argument hints. Exception: `/review-paper` has no `--no-verify`; its opt-out is `--no-novelty-check`, which skips the novelty probe entirely. If the probe runs, Post-Flight is mandatory.
+`--no-verify` flag skips Post-Flight in `/lit-review-sa`, `/research-ideation`, `/respond-to-referees` and `/interview-me`. Useful for speed-critical iterations or when the user is actively reading the source material themselves. Document the opt-out in each skill's argument hints. Exception: `/review-paper` has no `--no-verify`; its opt-out is `--no-novelty-check`, which skips the novelty probe entirely. If the probe runs, Post-Flight is mandatory.
 
 ## Cross-references
 

@@ -10,7 +10,7 @@
 
 ## 1. Frontmatter ↔ body tool parity (`Task` missing from `allowed-tools`)
 
-**Example:** PR #92. `/lit-review`, `/research-ideation`, `/respond-to-referees`, `/interview-me` each documented "spawn `claim-verifier` via the `Agent` tool with `context=fork`" in their body, but none of them had `Task` in `allowed-tools`. Codex + Copilot both caught; deep-audit missed.
+**Example:** PR #92. `/lit-review-sa`, `/research-ideation`, `/respond-to-referees`, `/interview-me` each documented "spawn `claim-verifier` via the `Agent` tool with `context=fork`" in their body, but none of them had `Task` in `allowed-tools`. Codex + Copilot both caught; deep-audit missed.
 
 **How to catch.** Automated by `scripts/check-skill-integrity.py` (check 1: `Agent` spawn patterns, with `Task` kept as a legacy alias). For other tools (Edit, Write, MultiEdit, NotebookEdit), the script has narrower patterns. WebSearch / WebFetch / Read / Grep / Glob / Bash are intentionally excluded — too many prose false positives.
 

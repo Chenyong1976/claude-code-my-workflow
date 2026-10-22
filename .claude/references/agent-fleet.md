@@ -13,7 +13,7 @@ A wrong "looks fine" from one of these is expensive (a desk-reject, a hallucinat
 | `editor` | high | Desk review, referee selection, editorial synthesis | read-only | selects referee dispositions | `/review-paper --peer` / `--variance` |
 | `domain-referee` | high | Substance referee (contribution, positioning, external validity) | read-only | yes (6-way taxonomy) | `/review-paper --peer` |
 | `methods-referee` | high | Methodology referee (paper-type-aware identification/inference) | read-only | yes (6-way taxonomy) | `/review-paper --peer` |
-| `claim-verifier` | high | Fresh-context CoVe verifier (citations, numbers, novelty) | read-only | no | `/verify-claims`, post-flight in `/lit-review` · `/research-ideation` · `/respond-to-referees` · `/review-paper --peer`; hallucination gate |
+| `claim-verifier` | high | Fresh-context CoVe verifier (citations, numbers, novelty) | read-only | no | `/verify-claims`, post-flight in `/lit-review-sa` · `/research-ideation` · `/respond-to-referees` · `/review-paper --peer`; hallucination gate |
 | `domain-reviewer` | medium | Field-specific substance review of a deck or a manuscript section (5 lenses; **template — customize**) | read-only | no | `/slide-excellence`, `/seven-pass-review` (methods lens) |
 | `quarto-critic` | medium | Adversarial Beamer↔Quarto parity critic | read-only | no | `/qa-quarto`, `/slide-excellence` (parity) |
 | `tikz-reviewer` | medium | Measurement-based TikZ collision/aesthetic audit | read-only | no | `/slide-excellence` (if TikZ), `/extract-tikz`, `/new-diagram` |

@@ -15,7 +15,7 @@ Convert one research paper into a ready-to-build teaching package: a lecture out
 - You want the teachable core extracted and pitched to a level, not a generic summary.
 - You're prepping the *plan* for a deck and want `/create-lecture` to do the drafting.
 
-Not for: literature surveys across many papers (use `/lit-review`); refereeing the paper's correctness (use `/review-paper`); drafting the actual Beamer slides (use `/create-lecture`).
+Not for: literature surveys across many papers (use `/lit-review-sa`); refereeing the paper's correctness (use `/review-paper`); drafting the actual Beamer slides (use `/create-lecture`).
 
 ## Inputs
 
@@ -104,7 +104,7 @@ Motivation → Setup → Key Result → Method → Takeaways  (one line each)
 
 - `/create-lecture` — consumes the Phase 2 slide skeleton to draft the actual Beamer deck. See [`.claude/skills/create-lecture/SKILL.md`](../create-lecture/SKILL.md).
 - `/review-paper` — referee the paper's correctness *before* teaching it if you're unsure the result holds. See [`.claude/skills/review-paper/SKILL.md`](../review-paper/SKILL.md).
-- `/lit-review` — for situating the paper among many, rather than teaching one deeply. See [`.claude/skills/lit-review/SKILL.md`](../lit-review/SKILL.md).
+- `/lit-review-sa` — for situating the paper among many, rather than teaching one deeply. See [`.claude/skills/lit-review-sa/SKILL.md`](../lit-review-sa/SKILL.md).
 - The exercise brief (written in Phase 3; section 5 of the output) is the input contract for `/scaffold-exercises`, which fleshes out problem sets; this skill stops at the brief.
 
 ## What this skill does NOT do

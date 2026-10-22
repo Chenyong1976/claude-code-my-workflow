@@ -16,7 +16,7 @@ Turn a bare topic list or reading list into a teachable syllabus: a course descr
 - You are converting last year's syllabus to a new length, level, or modality.
 - You want the schedule's weeks pre-mapped to lecture decks before you start building slides.
 
-Not for building the slides themselves (`/create-lecture`), reviewing a deck's pedagogy (`/pedagogy-review`), or assembling the reading list from scratch (`/lit-review`).
+Not for building the slides themselves (`/create-lecture`), reviewing a deck's pedagogy (`/pedagogy-review`), or assembling the reading list from scratch (`/lit-review-sa`).
 
 ## Phase 0: Intake (elicit before drafting)
 
@@ -105,7 +105,7 @@ End the chat message (not the file) with a **gap summary**: weeks with no readin
 ## Cross-references
 
 - `/create-lecture` ([`.claude/skills/create-lecture/SKILL.md`](../create-lecture/SKILL.md)) — the natural next step; feed it the work-list rows one week at a time.
-- `/lit-review` ([`.claude/skills/lit-review/SKILL.md`](../lit-review/SKILL.md)) — build or extend the reading list *before* sequencing.
+- `/lit-review-sa` ([`.claude/skills/lit-review-sa/SKILL.md`](../lit-review-sa/SKILL.md)) — build or extend the reading list *before* sequencing.
 - `/interview-me` ([`.claude/skills/interview-me/SKILL.md`](../interview-me/SKILL.md)) — if the course goals are still fuzzy, formalize them first.
 - `/pedagogy-review` ([`.claude/skills/pedagogy-review/SKILL.md`](../pedagogy-review/SKILL.md)) — review narrative/pacing once decks exist; the syllabus arc is the input it checks against.
 - Authoring conventions: [`templates/skill-template.md`](../../../templates/skill-template.md).
@@ -113,7 +113,7 @@ End the chat message (not the file) with a **gap summary**: weeks with no readin
 ## What this skill does NOT do
 
 - Does not write slide content or scaffold `.tex`/`.qmd` decks — that is `/create-lecture`.
-- Does not search for or vet readings — pair with `/lit-review`.
+- Does not search for or vet readings — pair with `/lit-review-sa`.
 - Does not grade, generate problem sets, or build answer keys.
 - Does not assert institutional policy as binding — the Policies section is editable boilerplate the instructor must reconcile with their department's rules.
 - Does not invent citations; every reading in the schedule comes from the material the user supplied.

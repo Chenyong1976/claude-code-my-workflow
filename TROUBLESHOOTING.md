@@ -257,7 +257,7 @@ This is the verifier being honest, not stubborn. It means:
 
 Resolution: supply a canonical source (DOI / arXiv / repo path), or accept the `cannot-verify` flag in the final output and manually confirm yourself.
 
-### Integration skill (e.g., `/lit-review`) hangs at Post-Flight step
+### Integration skill (e.g., `/lit-review-sa`) hangs at Post-Flight step
 
 If the invoking skill doesn't return after launching `claim-verifier`, check:
 
@@ -279,7 +279,7 @@ Do **not** opt out when:
 
 - Producing a deliverable for external readers (literature review for a committee, R&R response for an editor, grant-proposal lit survey).
 - The draft contains >5 citations you haven't personally verified.
-- `/lit-review` just returned results — the most common hallucination vector in the whole template.
+- `/lit-review-sa` just returned results — the most common hallucination vector in the whole template.
 
 ## `check-skill-integrity` failures
 
