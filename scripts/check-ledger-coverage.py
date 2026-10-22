@@ -213,7 +213,7 @@ def main():
         print("  A check that could not run is not a passing check.", file=sys.stderr)
         return 2
 
-    rel = lambda p: os.path.relpath(p, ROOT)
+    rel = lambda p: os.path.relpath(p, ROOT).replace(os.sep, "/")
     errs, warns = [], []
     n = lambda src: sum(1 for s, _, _, _ in checks if s == src)
     art = lambda src: ("an " if src[0] in "aeiou" else "a ") + src

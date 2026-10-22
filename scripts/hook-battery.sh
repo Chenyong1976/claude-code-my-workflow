@@ -104,6 +104,7 @@ if ! command -v python3 >/dev/null 2>&1; then
 fi
 
 TMP="$(mktemp -d "${TMPDIR:-/tmp}/hook-battery.XXXXXX")" || exit 2
+command -v cygpath >/dev/null 2>&1 && TMP="$(cygpath -m "$TMP")"   # native Windows python cannot resolve MSYS /tmp paths
 trap 'rm -rf "$TMP"' EXIT INT TERM
 
 # ── --fixture-selftest: the child half of cases e1-e3 ──────────────────────
